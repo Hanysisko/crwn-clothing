@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/crwn-clothing/static/css/main.e6c13ad2.css",
+    "main.js": "/crwn-clothing/static/js/main.fd036bc7.js",
+    "service-worker.js": "/crwn-clothing/service-worker.js",
+    "index.html": "/crwn-clothing/index.html",
+    "main.e6c13ad2.css.map": "/crwn-clothing/static/css/main.e6c13ad2.css.map",
+    "main.fd036bc7.js.map": "/crwn-clothing/static/js/main.fd036bc7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.fd036bc7.js"
+  ]
+}

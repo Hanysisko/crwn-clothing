@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
+import { Route } from 'react-router-dom'
 import { HomePage } from './pages/homepage/homepage.component';
-import './App.css';
 
+const HatsPage = () => {
+  <div>
+    <h1>HATS PAGE</h1>
+  </div>
+};
 
 class App extends Component {
   constructor() {
     super();
-  }
-
+  };
+  
   render() {
-    return (
+    return( 
       <div className="App">
-        <HomePage />
+        <Route exact path={'/crwn-clothing'} component={ HomePage }/>
+        <Route exact path={'/hats'} component={ HatsPage }/> 
+        {/* NIE DZIAŁA KURWA I NIE BENDZIE DZIAŁAĆ */}
       </div>
     );
   }

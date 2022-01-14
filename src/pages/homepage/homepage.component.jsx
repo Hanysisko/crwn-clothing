@@ -1,18 +1,11 @@
 import React from 'react';
-
-import { MenuItem } from '../../components/menu-item/menu-item.component.jsx';
+import Directory from '../../components/directory/directory.component';
 import './homepage.styles.scss';
 
-export const HomePage = props => (
+export const HomePage = () => (
   
   <div className='homepage'>
-    <div className='directory-menu'>
-      
-      {props.homepageprop.map(menuit => (
-        <MenuItem key={menuit.title} menuit={menuit} />
-      ))}
-
-    </div>
+    <Directory/>
   </div>
 
 )

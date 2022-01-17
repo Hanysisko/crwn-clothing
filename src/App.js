@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 import { HomePage } from './pages/homepage/homepage.component';
 
-const HatsPage = () => {
+const HatsPage = () => (
   <div>
     <h1>HATS PAGE</h1>
   </div>
-};
+);
 
 class App extends Component {
   constructor() {
@@ -17,8 +17,7 @@ class App extends Component {
     return( 
       <div className="App">
         <Route exact path={'/crwn-clothing'} component={ HomePage }/>
-        <Route exact path={'/hats'} component={ HatsPage }/> 
-        {/* NIE DZIAŁA KURWA I NIE BENDZIE DZIAŁAĆ */}
+        <Route exact path={'/hats'} component={ HatsPage }/>
       </div>
     );
   }

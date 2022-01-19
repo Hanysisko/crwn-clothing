@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 import { HomePage } from './pages/homepage/homepage.component';
 
 const HatsPage = () => (
@@ -16,8 +16,10 @@ class App extends Component {
   render() {
     return( 
       <div className="App">
-        <Route exact path={'/crwn-clothing'} component={ HomePage }/>
-        <Route exact path={'/hats'} component={ HatsPage }/>
+        <Switch>
+          <Route exact path={'/'} component={ HomePage }/>
+          <Route path={'/hats'} component={ HatsPage }/>
+        </Switch>
       </div>
     );
   }

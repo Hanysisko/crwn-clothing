@@ -6,7 +6,7 @@ import './homepage.styles.scss';
 const HomePage = ({ history }) => (
   
   <div className='homepage'>
-    <button onClick={() => history.push('/crwn-clothing/shop')}>*test* GO TO SHOP *test*</button>
+    {/* <button onClick={() => history.push('/crwn-clothing/shop')}>*test* GO TO SHOP *test*</button> */}
     <Directory/>
   </div>
 

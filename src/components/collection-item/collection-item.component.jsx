@@ -12,7 +12,10 @@ const CollectionItem = ({ id, name, price, imageUrl}) => (
         backgroundImage: `url(${imageUrl})`
       }}  
     >
-      <Link className="button" to='/'>ADD TO CART</Link>
+      <Link className="button" to='/beepboop,addingitemtocart'>
+        <span>ADD TO CART</span><br></br>
+        <span style={{fontSize: 10}}>(back to homepage for now)</span>
+      </Link>
     </div>
     
 

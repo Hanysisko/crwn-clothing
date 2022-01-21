@@ -14,7 +14,7 @@ const CollectionItem = ({ id, name, price, imageUrl}) => (
     >
       <Link className="button" to='/beepboop,addingitemtocart'>
         <span>ADD TO CART</span><br></br>
-        <span style={{fontSize: 10}}>(back to homepage for now)</span>
+        <span style={{fontSize: 10}}>(work in progress)</span>
       </Link>
     </div>
     

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom'
 
 import './App.css'
@@ -6,6 +6,7 @@ import './App.css'
 import Header from './components/header/header.component.jsx'
 import HomePage from './pages/homepage/homepage.component.jsx';
 import ShopPage from './pages/shoppage/shoppage.component.jsx';
+import SignInUpPage from './pages/signin-signup-page/signin-signup-page.component.jsx';
 
 export const WorkInProgress = ({history}) => (
   <div>
@@ -32,7 +33,14 @@ class App extends Component {
             <Redirect to={'/'}/>
           </Route>
           <Route exact path={'/'} component={ HomePage }/>
-          <Route exact path={'/shop'} component={ ShopPage }/>
+          <Route path={'/shop'} component={ ShopPage }/>
+          {/* <Route path={'/signin'} component={ WorkInProgress, SignInUpPage }/> */}
+          <Route path='/signin' render={() =>
+            <Fragment>
+              <WorkInProgress/>
+              <SignInUpPage/>
+            </Fragment>
+          }/>
 
           <Route component={ WorkInProgress }/>
 

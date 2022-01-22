@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom'
 
 import './App.css'
@@ -33,14 +33,14 @@ class App extends Component {
             <Redirect to={'/'}/>
           </Route>
           <Route exact path={'/'} component={ HomePage }/>
-          <Route path={'/shop'} component={ ShopPage }/>
-          {/* <Route path={'/signin'} component={ WorkInProgress, SignInUpPage }/> */}
-          <Route path='/signin' render={() =>
+          <Route exact path={'/shop'} component={ ShopPage }/>
+          <Route path={'/signin'} component={ SignInUpPage }/>
+          {/* <Route exact path='/signin' render={() =>
             <Fragment>
               <WorkInProgress/>
               <SignInUpPage/>
             </Fragment>
-          }/>
+          }/> */}
 
           <Route component={ WorkInProgress }/>
 

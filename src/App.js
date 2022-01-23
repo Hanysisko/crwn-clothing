@@ -8,6 +8,8 @@ import HomePage from './pages/homepage/homepage.component.jsx';
 import ShopPage from './pages/shoppage/shoppage.component.jsx';
 import SignInUpPage from './pages/signin-signup-page/signin-signup-page.component.jsx';
 
+import { auth } from './firebase/firebase.utils.js';
+
 export const WorkInProgress = ({history}) => (
   <div>
     <h1>Sorry, not done yet!</h1>
@@ -17,15 +19,33 @@ export const WorkInProgress = ({history}) => (
 );
 
 class App extends Component {
-  // constructor() {
-  //   super();
-  // };
+  constructor() {
+    super();
+
+    this.state = {
+        currentUser: null,
+    }
+  }
+
+  unsubscribeFromAuth = null;
+
+  componentDidMount() {
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
+      this.setState({ currentUser: user });
+
+      console.log(user);
+    });
+  }
+
+  componentWillUnmount() {
+    this.unsubscribeFromAuth();
+  }
   
   render() {
     return(
       <div>
         
-        <Header/>
+        <Header currentUser={this.state.currentUser}/>
 
         <Switch>
           

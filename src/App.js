@@ -8,7 +8,7 @@ import HomePage from './pages/homepage/homepage.component.jsx';
 import ShopPage from './pages/shoppage/shoppage.component.jsx';
 import SignInUpPage from './pages/signin-signup-page/signin-signup-page.component.jsx';
 
-import { auth } from './firebase/firebase.utils.js';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils.js';
 
 export const WorkInProgress = ({history}) => (
   <div>
@@ -30,10 +30,20 @@ class App extends Component {
   unsubscribeFromAuth = null;
 
   componentDidMount() {
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(user => {
-      this.setState({ currentUser: user });
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
+      
+      if(userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
 
-      console.log(user);
+        userRef.onSnapshot(snapShot => {
+          this.setState({
+            currentUser: {
+              id: snapShot.id,
+              ...snapShot.data(),
+            }
+          });
+        });
+      } else { this.setState({ currentUser: userAuth }); }
     });
   }
 

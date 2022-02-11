@@ -66,8 +66,8 @@ class SignUp extends Component {
 
         <form onSubmit={this.handleSubmit}>
           <FormInput 
-            name='text' 
-            type='displayName'
+            name='displayName' 
+            type='text'
             label='display name'
             value={displayName} 
             handleChange={this.handleChange}

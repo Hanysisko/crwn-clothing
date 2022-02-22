@@ -1,1 +1,3 @@
-const userReducer = (state, action) => 
+const userReducer = (state, action) => {
+  console.log('hello');
+};

@@ -23,7 +23,7 @@ class App extends Component {
     super();
 
     this.state = {
-        currentUser: null,
+      currentUser: null,
     }
   }
 

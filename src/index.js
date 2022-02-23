@@ -6,9 +6,11 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 
+import store from './redux/store.js';
+
 ReactDOM.render(
   <React.StrictMode>
-    <Provider>
+    <Provider store={store}>
       <Router>  
         <App />
       </Router>

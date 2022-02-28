@@ -10,7 +10,6 @@ import ShopPage from './pages/shoppage/shoppage.component.jsx';
 import SignInUpPage from './pages/signin-signup-page/signin-signup-page.component.jsx';
 
 import { auth, createUserProfileDocument } from './firebase/firebase.utils.js';
-
 import { setCurrentUser } from './redux/user/user.actions.js';
 
 export const WorkInProgress = ({history}) => (

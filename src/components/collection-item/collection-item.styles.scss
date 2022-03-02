@@ -4,6 +4,8 @@
   flex-direction: column;
   height: 350px;
   align-items: center;
+  position: relative;
+  transition: all 0.1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 
   .image {
     display: flex;
@@ -13,34 +15,33 @@
     background-size: cover;
     background-position: center;
     margin-bottom: 5px;
+    transition: all 0.1s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  }
 
-    .button{
-      margin: 10% 10%;
-      padding: 5%;
-      font-weight: bold;
-      background-color: white;
-      text-align: center;
-      opacity: 0;
-      transition: all 0.2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  .custom-button {
+    position: absolute;
+    top: 255px;
+    display: none;
+    transition: all 0.2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
 
-      &:hover{
-        transition: 0.2s;
-        transform: scale(1.15);
-      }
-    }
-
-    &:hover{
-
-      & .button{
-        cursor: pointer;
-        opacity: 0.7;
-
-        &:hover{
-          opacity: 0.9;
-        }
-      }
+    &:hover {
+      transition: 0.2s;
+      transform: scale(1.15);
     }
   }
+
+  &:hover {
+    .image {
+      opacity: 0.8;
+      transition: 0.2s;
+    }
+
+    .custom-button {
+      opacity: 0.8;
+      display: flex;
+    }
+  }
+
 
   .collection-footer {
     width: 100%;

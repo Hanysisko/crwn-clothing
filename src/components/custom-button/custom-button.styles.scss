@@ -31,6 +31,19 @@
     }
   }
 
+  &.whitened {
+    background-color: white;
+    border-color: white;
+    color: black;
+    font-weight: 700;
+
+    &:hover {
+      background-color: white;
+      border-color: white;
+      color: black;
+    }
+  }
+
   &.inverted {
     background-color: white;
     color: black;

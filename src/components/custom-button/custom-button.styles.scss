@@ -37,10 +37,8 @@
     color: black;
     font-weight: 700;
 
-    &:hover {
-      background-color: white;
-      border-color: white;
-      color: black;
+    &:active {
+      background-color: lightgrey;
     }
   }
 

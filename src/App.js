@@ -3,7 +3,8 @@ import { Switch, Route, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import './App.css'
+import { GlobalStyle } from './global.styles.js';
+// import './App.css'
 
 import Header from './components/header/header.component.jsx'
 import HomePage from './pages/homepage/homepage.component.jsx';
@@ -54,6 +55,8 @@ class App extends Component {
   render() {
     return(
       <div>
+
+        <GlobalStyle/>
         
         <Header/>
 
